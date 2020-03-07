@@ -1,0 +1,221 @@
+/* pages/personal_homepage/personal_homepage.wxss */
+
+.userinfo_bg>image {
+  /*毛玻璃效果的白边问题，延伸图片的左右边边距*/
+  margin-left: -40rpx;
+  width: 110%;
+  height: 400rpx;
+  /*毛玻璃效果*/
+  -webkit-filter: blur(20rpx);
+  -moz-filter: blur(20rpx);
+  -o-filter: blur(20rpx);
+  -ms-filter: blur(20rpx);
+  filter: blur(20rpx);
+}
+
+.userinfo_bg {
+  z-index: -1;
+  overflow: hidden; /*删除下方白边*/
+}
+
+.user_info {
+  position: absolute;
+  top: 0;
+  height: 400rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.user_info_edit>image {
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.user_info_edit {
+  margin-right: 20rpx;
+  align-self: flex-end; /*编辑图标居右*/
+}
+
+.user_motto {
+  width: 310rpx;
+  margin-top: 10rpx;
+  font-size: 0.7rem;
+}
+
+.user_data {
+  margin-top: 30rpx;
+  font-size: 0.8rem;
+}
+
+.user_data>b {
+  font-size: 35rpx;
+}
+
+.user_pic>image {
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 50%;
+}
+
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.navbar {
+  display: flex;
+  background-color:#FFFFFF;
+}
+
+.navbar .item {
+  width: 50%;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.navbar .item.active {
+  color: #fc0;
+  border-bottom: 5rpx #fc0 solid;
+}
+
+.publish_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; /*???*/
+  align-content: space-around;
+  font-size: 0.7rem;
+  padding: 10rpx;
+  padding-top: 0rpx;
+}
+
+.item-img>image {
+  width: 100%;
+  height: 337rpx; /*图片高度*/
+}
+
+.item-box {
+  width: 48%;
+  height: 430rpx;
+  margin-top: 3%;
+  background-color: #fff;
+  border-radius: 5rpx;
+}
+
+.item-info {
+  padding: 0rpx 10rpx 0rpx 10rpx;
+}
+
+.info-title {
+  padding-left: 10rpx;
+  font-size: 0.8rem;
+}
+
+.info-pick>image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.info-pick {
+  float: right;
+  height: 45rpx;
+  width: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-price {
+  padding-left: 10rpx;
+  font-size: 35rpx;
+  float: left;
+  color: #f82800;
+  width: 60%;
+}
+
+/*动态-样式*/
+
+.activity_list {
+margin-top: 1rpx;
+}
+.activity_item{
+  padding: 30rpx;
+  background-color: #fff;
+ margin-bottom: 20rpx;
+}
+.goods_box {
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+}
+
+.goods_username {
+  font-size: 30rpx;
+  line-height: 45rpx;
+}
+
+.goods_info {
+  font-size: 25rpx;
+  width: 78%;
+  padding-right: 10rpx;
+}
+
+.goods_pic>image {
+  height: 120rpx;
+  width: 120rpx;
+}
+
+.activity_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 25rpx;
+  padding-bottom: 10rpx;
+}
+
+.activity_data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height:40rpx;
+}
+
+.comment_data>text {
+  /*2行文字超出省略*/
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activity_way>.user_name {
+  /*需要考虑用户名过长的问题，js实现*/
+  color: #3d7be1;
+}
+
+.activity_time {
+  color: #989898;
+  font-size: 25rpx;
+  line-height:30rpx;
+}
+
+.goods_describe>text {
+  color: #989898;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

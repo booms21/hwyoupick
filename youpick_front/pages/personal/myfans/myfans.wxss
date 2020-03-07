@@ -1,0 +1,28 @@
+/* pages/personal/myfans/myfans.wxss */
+.myfans_list{
+  display: flex;
+flex-direction: column;
+padding:0 20rpx;
+}
+.fans_img>image{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.myfans_item{
+   height: 90rpx;
+  padding:15rpx;
+ border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+align-items: center;
+}
+.fans_info{
+   height: 50rpx;
+line-height: 60rpx;
+width:220rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

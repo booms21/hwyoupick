@@ -1,0 +1,68 @@
+<!--pages/goods_sort/goods_sort.wxml-->
+<loading hidden="{{loadingHidden}}">正在加载...</loading>
+<scroll-view scroll-y="true" lower-threshold="20" style="height:100%" bindscrolltoupper="bindscrolltoupper">
+ 
+  <view class='top-bannerbg'>
+   <image src='{{bannerimg[sortid-1]}}' mode='center'></image>
+   </view>
+
+<view class='Modal'></view>
+
+<view class='sort_info'>
+<image src='{{bannerimg[sortid-1]}}' mode='aspectFit'></image>
+<view class='sort_text'>
+<view class='sort_title'>{{list[0].goodsSort_name}}</view>
+<view>记录数 {{list.length}}</view>
+<view>{{list[0].goodsSort_describe}}</view>
+</view>
+</view>
+   
+
+    <block wx:for="{{list}}" wx:key="{{item.id}}" >
+        <!-- 分割线 -->
+        <view class="divLine"></view>
+        <!-- 整体item样式 -->
+        <view class="containsView" bindtap="goDetail" data-id="{{item.id}}">
+            <view class="topContainsView">
+                <image class="profileImage" src="{{item.wx_imgPath}}" lazy-load />
+                <view class="topRightView">
+                    <text class="topRightName">{{item.wx_nickname}}</text>
+                    <text class="topRightTime">{{item.release_time}}</text>
+                </view>
+            </view>
+            <text style="font-size: 30rpx">{{item.review_title}}</text>
+       
+          
+            <!-- 普通大图 可点击查看全部图片 -->
+            <view data-url="{{item.goods_imgPath}}" data-height="200" data-width="500" catchtap="lookBigPicture"
+               style="position: relative;">
+                <!-- 图片资源 -->
+                <image class="centerContent" src="{{item.goods_imgPath}}" mode="aspectFill" lazy-load />
+                <!-- 图片上浮动的点击查看详情图片view -->
+                <view class="flexView">
+                    <image src="../images/seeBigPicture.png" style="width: 60rpx; height: 60rpx;" lazy-load />
+                    <text class="flexText">点击查看全图</text>
+                </view>
+            </view>
+            <!-- 底部view样式 -->
+            <view class="bottomView">
+                <view class="bottomItemView">
+                    <image class="bottomItemImage" src="../images/ding.png" lazy-load />
+                    <text class="bottomItemText">{{item.goods_likes}}</text>
+                </view><!--
+                <view class="bottomItemView">
+                    <image class="bottomItemImage" src="../images/wx_app_view.png" lazy-load />
+                    <text class="bottomItemText">{{item.view}}</text>
+                </view>
+                <view class="bottomItemView">
+                    <image class="bottomItemImage" src="../images/share.png" lazy-load />
+                    <text class="bottomItemText">{{item.goods_share}}</text>
+                </view>
+                <view class="bottomItemView">
+                    <image class="bottomItemImage" src="../images/comment.png" lazy-load  />
+                    <text class="bottomItemText">{{item.goods_comments}}</text>
+                </view>-->
+            </view>
+        </view>
+    </block>
+</scroll-view>

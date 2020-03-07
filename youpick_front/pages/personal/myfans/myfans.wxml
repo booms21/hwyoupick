@@ -1,0 +1,20 @@
+<!--pages/personal/myfans/myfans.wxml-->
+<view class='container'>
+  <view class='myfans_list' wx:for="{{list}}" wx:key="{{item.id}}">
+    <view class='myfans_item' bindtap='goUserHomepage' data-openid="{{item.fan_wxopenid}}">
+
+      <view class='fans_info'>
+
+        <view class='fans_img'>
+          <image src='{{item.wx_imgPath}}'></image>
+        </view>
+
+        <text>{{item.wx_nickname}}</text>
+      </view>
+
+    </view>
+ 
+ </view>
+ 
+
+</view>

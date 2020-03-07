@@ -1,0 +1,123 @@
+/* pages/personal/personal.wxss */
+
+
+.container{
+    background-color:#eee; 
+}
+.user_info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:30rpx;
+height:200rpx;
+background-color: #fff;
+border-bottom: 1rpx solid #f0f0f0;
+}
+.psl_info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+  height: inherit;
+  width:450rpx;
+}
+.into_psl_homepage{
+  
+  height: inherit;
+    display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items:center;
+
+}
+.into_psl_homepage>text{
+  font-size: 0.8rem;
+  color:#666;
+}
+.into_psl_homepage>image{
+  height: 30rpx;
+  width: 30rpx;
+}
+.user_pic>image{
+border-radius: 50%;
+height: 140rpx;
+width: 140rpx;
+}
+.info>.user_name{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.info {
+  width: 260rpx;
+
+}
+.info>.user_area{
+   font-size: 0.7rem;
+   margin-top:20rpx;
+}
+.user_area>image{
+  height:70rpx;
+  width:70rpx;
+  position: relative;
+  top:20rpx;
+}
+.app_info{
+text-align: center;
+  font-size:0.7rem;
+  color: #666;
+  margin-top: 20rpx;
+}
+
+
+
+.category-item {
+    width: 100%;
+    margin: 20rpx 0;
+    border-top: 1rpx solid #d9d9d9;
+    border-bottom: 1rpx solid #d9d9d9;
+    background-color: #fff;
+}
+
+
+.detail-item{
+    display: flex;
+    margin-left: 30rpx;
+    border-bottom: 1px solid RGBA(217, 217, 217, .4);
+    height:auto;
+    padding:20rpx 0;
+    align-items: center;
+}
+.detail-item:last-child{
+    border-bottom:none;
+}
+.detail-item image{
+    height: 40rpx;
+    width:40rpx;
+
+}
+.detail-item text{
+    color:#35495e;
+    font-size:36rpx;
+    flex:1;
+    margin-left: 30rpx;
+}
+.detail-item .detail-item-btn{
+    width: 50rpx;
+    color: #d9d9d9;
+    height: 40rpx;
+    margin-right: 20rpx;
+    text-align: center;
+}
+.detail-item .detail-item-btn::after{
+    display: inline-block;
+    content:'';
+    width: 25rpx;
+    height: 25rpx;
+    color: #888;
+    margin-top: 8rpx;
+    border:1px #888 solid;
+    border-top-color:transparent;
+    border-left-color:transparent;
+    transform: rotate(-45deg);
+}

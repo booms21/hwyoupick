@@ -1,0 +1,7 @@
+<!--pages/personal_homepage/personal_info_edit/personal_info_edit/motto_edit/motto_edit.wxml-->
+<view class='container'>
+<view class="motto_input">
+<input placeholder='说点什么吧' maxlength='30' bindinput='mottoInput' value='{{motto}}'></input>
+</view>
+<view class="motto_btn"><button type='primary' bindtap='save_motto'>保存</button></view>
+</view>

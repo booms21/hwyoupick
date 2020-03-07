@@ -1,0 +1,72 @@
+<!--pages/personal/personal.wxml-->
+<view class="container">
+  <!--用户基本信息开始-->
+  <view class="user_info">
+    <view class='psl_info'>
+      <view class="user_pic">
+        <image src="{{userInfo.avatarUrl}}" background-size="cover"  catchtap="chooseImg" />
+      </view>
+      <view class="info">
+        <view class="user_name">
+          <text>{{userInfo.nickName}}</text>
+        </view>
+        <view class="user_area">
+          
+          <image src='{{gender==1?"../images/man_ico.png":"../images/female_ico.png"}}'></image>
+          <text>{{userInfo.city}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="into_psl_homepage" catchtap='tohomePage'>
+      <text>个人主页</text>
+      <image src='../images/into.png'></image>
+    </view>
+  </view>
+  <!--用户基本信息结束-->
+
+
+  <!--用户选项开始-->
+<view class="category-item">
+      <block wx:for="{{device}}">
+        <view class="detail-item" catchtap="{{item.tap}}">
+          <image src="{{item.iconurl}}"></image>
+          <text>{{item.title}}</text>
+          <view class="detail-item-btn"></view>
+        </view>
+      </block>
+    </view>
+    <view class="category-item" >
+      <block wx:for="{{api}}">
+        <view class="detail-item" catchtap="{{item.tap}}">
+          <image src="{{item.iconurl}}"></image>
+          <text>{{item.title}}</text>
+          <view class="detail-item-btn"></view>
+        </view>
+      </block>
+    </view>
+    <view class="category-item">
+      <block wx:for="{{others}}">
+        <view class="detail-item" catchtap="{{item.tap}}">
+          <image src="{{item.iconurl}}"></image>
+          <text>{{item.title}}</text>
+          <view class="detail-item-btn"></view>
+        </view>
+      </block>
+    </view>
+    <modal title="指南针" confirm-text="确定" no-cancel hidden="{{compassHidden}}" bindconfirm="hideCompass" confirm-color="#1F4BA5">
+      当前方向：偏北{{compassVal}}°
+    </modal>
+
+
+
+  <!--用户选项结束-->
+
+
+
+  <!--提示信息开始-->
+  <view class="app_info">
+    v 1.0 ALL BY SZL 学号1516040424
+
+  </view>
+  <!--提示信息结束-->
+</view>

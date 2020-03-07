@@ -1,0 +1,24 @@
+<!--pages/personal/myattention/myattention.wxml-->
+<view class='container'>
+  <view class='myattention_list' wx:for="{{list}}" wx:key="{{item.id}}" wx:for-index='idx'>
+
+    <view class='myattention_item'>
+
+      <view class='attention_info'>
+
+        <view class='attention_img'>
+          <image src='{{item.wx_imgPath}}'></image>
+        </view>
+
+        <text>{{item.wx_nickname}}</text>
+      </view>
+
+      <view class='attonbtn' bindtap='cancelattention' data-idx="{{idx}}" data-openid="{{item.followed_wxopenid}}">
+        <text>取消关注</text>
+      </view>
+      
+    </view>
+ 
+
+</view>
+</view>

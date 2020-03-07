@@ -1,0 +1,27 @@
+/* pages/report/report.wxss */
+page {
+    background-color: #f0f0f0;
+}
+
+.title_input{
+  height: 50rpx;
+  border-bottom: 1rpx solid #f0f0f0; 
+}
+.input_box{
+  padding: 20rpx 30rpx 30rpx 30rpx;
+  background-color: #fff;
+}
+.report_detail{
+width: 100%;
+margin-top: 20rpx;
+}
+.sort>.input_box{
+  color: #666;
+margin-top: 20rpx;
+}
+
+.submit>.input_box{
+  color: #666;
+  background-color:transparent;
+margin-top: 40rpx;
+}

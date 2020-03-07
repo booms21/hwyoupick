@@ -1,0 +1,244 @@
+/**index.wxss**/
+view{
+  box-sizing: border-box;
+}
+.top_tool {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+  height: 80rpx;
+}
+
+.logo {
+  flex-grow: 1;
+  font-family: '黑体';
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  color: aquamarine;
+  line-height: 80rpx;
+}
+
+swiper {
+  height: 250rpx;
+}
+swiper .wx-swiper-dot{
+    width: 14rpx;
+    display: inline-flex;
+    height: 14rpx;
+    background:rgba(255,255,255,.5);
+}
+swiper .wx-swiper-dot::before{
+     content: '';
+     flex-grow: 1;
+} 
+swiper .wx-swiper-dot-active::before{
+     background:rgba(255,255,255,1);
+     border-radius: 100%;
+}
+
+
+
+.nav {
+  border-bottom:20rpx solid #f0f0f0;
+  padding-top: 10rpx;
+  height: 200rpx;
+  display: flex;
+  flex-flow: ROW ;
+  justify-content: center;
+  align-content: center;
+  
+}
+
+.nav>view {
+  text-align: center;
+  font-size: 0.7rem;
+  height: 140rpx;
+  width: 180rpx;
+}
+
+.nav>view>navigator>image {
+  border-radius: 50%;
+  height: 100rpx;
+  width: 100rpx;
+}
+
+.nav>view>navigator>text {
+  display: block;
+}
+
+.title {
+
+
+  padding: 20rpx;
+  font-weight: bolder;
+  font-size: 35rpx;
+}
+
+.title>.hot_str {
+  font-style: italic;
+}
+
+
+.list_item {
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 160rpx;
+  border-bottom: 2rpx solid #f0f0f0;
+}
+
+.item_title {
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item_info {
+  width: 580rpx;
+}
+
+.item_pic>image {
+  padding-top: 10rpx;
+  height: 120rpx;
+  width: 120rpx;
+
+}
+
+.item_sort>image {
+  position: relative;
+  top: 5rpx;
+  right: 5rpx;
+  height: 30rpx;
+  width: 30rpx;
+}
+
+.item_sort {
+  margin-top: 10rpx;
+  float: right;
+  font-size: 25rpx;
+}
+.item_score{
+
+  height: 30rpx;
+}
+.clearfix{zoom: 1; clear:both;}
+.fl{float: left;}
+.fr{float: right;}
+.item_price {
+  padding-top:10rpx;
+  height: 30rpx;
+  float: left;
+  color: orangered;
+  font-size: 0.9rem;
+  font-weight: bolder;
+}
+.some-room {
+    height: 361rpx;
+}
+.sroom-l {
+    width: 45.33%;
+    border-right: 1px solid #f9f9f9;
+    height: 361rpx;
+}
+.sroom-l image {
+    height: 361rpx;
+}
+.sroom-r {
+    width: 54.67%;
+    height: 361rpx;
+    background-color: white;
+}
+.sroom-r navigator {
+    width: 100%;
+    height: 180rpx;
+
+}
+.sroom-r navigator:first-child {
+    border-bottom: 1px solid #f9f9f9;
+}
+.sroom-r navigator image {
+    height: 178rpx;
+}
+.sroom-r navigator:first-child image {
+    height: 177rpx;
+}
+
+
+.weui-search-bar {
+    flex-grow:3;
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #EFEFF4;
+  border-top: 1rpx solid #D7D6DC;
+  border-bottom: 1rpx solid #D7D6DC;
+}
+.weui-icon-search {
+  margin-right: 8px;
+  font-size: inherit;
+}
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+.weui-search-bar__text {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+          flex: auto;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 1rpx solid #E6E6EA;
+}
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.weui-icon-clear {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 7px 8px;
+  font-size: 0;
+}
+.weui-search-bar__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 3px;
+  text-align: center;
+  color: #9B9B9B;
+  background: #FFFFFF;
+  line-height: 28px;
+}
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09BB07;
+  white-space: nowrap;
+}

@@ -1,0 +1,54 @@
+/**app.wxss**/
+/********** 初始化 **********/
+@import 'style/weui.wxss';
+view,scroll-view,swiper,swiper-item,icon,text,progress,mask,input,button,label,form,checkbox,checkbox-group,picker,picker-item,radio,radio-group,switch,slider,slector-item,action-sheet,action-sheet-cancel,action-sheet-item,loading,toast,modal,navigator,image,audio,video,map,canvas,native{
+  margin:0;
+  padding: 0;
+}
+page{
+  min-width: 320px;
+  font: 14px/150% "微软雅黑", Verdana, Arial, Helvetica, sans-serif;
+  color: #222;
+  -webkit-text-size-adjust: none;
+  padding: 0;
+  margin: 0;
+
+}
+input,button {-webkit-appearance: none;appearance: none;}
+textarea {resize: none;}
+/* 禁止长按链接与图片弹出菜单 */
+navigator,image {-webkit-touch-callout: none;touch-callout: none;}
+/*去掉手持设备点击时出现的透明层*/
+navigator,button,input {-webkit-tap-highlight-color: transparent;tap-highlight-color: transparent;}
+input{outline:0;border:0;}
+
+/*图片大小自适应
+image{width: 100%;vertical-align: top;display: block;}*/
+/*文字超出隐藏*/
+.text-elli {overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.clear {clear: both;height: 0;overflow: hidden;}
+.clearfix{zoom: 1; clear:both;}
+.clearfix:after {display: block;height: 0;overflow: hidden;content: " ";visibility: hidden;clear: both;}
+.fl{float: left;}
+.fr{float: right;}
+.hidden{display: none;}
+.block{display: block;}
+.container {
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+
+}
+b{
+  font-weight: bolder;
+}
+.len-limit{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+image{
+width: 100%;
+height: 100%;
+}
+

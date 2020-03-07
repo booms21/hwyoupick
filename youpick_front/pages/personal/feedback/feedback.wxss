@@ -1,0 +1,28 @@
+/* pages/personal/feedback/feedback.wxss */
+page {
+    background-color: #f0f0f0;
+}
+
+.title_input{
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+.input_box{
+  padding: 20rpx 30rpx 30rpx 30rpx;
+  background-color: #fff;
+}
+.feedback_detail{
+width: 100%;
+margin-top: 30rpx;
+  border-bottom: 1rpx solid #f0f0f0; 
+}
+
+.submit>.input_box{
+  color: #666;
+  background-color:transparent;
+  margin-top: 40rpx;
+}
+.feedback_title{
+color: #999;
+  background-color: #fff;
+}

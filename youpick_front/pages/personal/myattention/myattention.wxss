@@ -1,0 +1,44 @@
+/* pages/personal/myattention/myattention.wxss */
+
+.myattention_list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20rpx;
+}
+
+.attention_img>image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.myattention_item {
+  height: 90rpx;
+  padding: 15rpx;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attention_info {
+  height: 50rpx;
+  line-height: 60rpx;
+  width:220rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.attonbtn {
+  font-weight: bolder;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: orange;
+  color: #fff;
+  border-radius: 45px 45px 45px 45px;
+  border: 2px solid orange;
+  min-width: 150rpx;
+  height: 60rpx;
+}

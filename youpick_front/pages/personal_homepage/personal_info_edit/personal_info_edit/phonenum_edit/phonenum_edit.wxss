@@ -1,0 +1,17 @@
+/* pages/personal_homepage/personal_info_edit/personal_info_edit/phonenum_edit/phonenum_edit.wxss */
+.phonenum_input>input {
+  height: 100rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 20rpx;
+}
+
+.phonenum_btn {
+  padding: 20rpx;
+  margin-top: 50rpx;
+}

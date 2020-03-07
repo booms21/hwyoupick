@@ -1,0 +1,7 @@
+<!--pages/personal_homepage/personal_info_edit/personal_info_edit/phonenum_edit/phonenum_edit.wxml-->
+<view class='container'>
+<view class="phonenum_input">
+<input placeholder='请输入11位手机号码' maxlength='11' type='number' value='{{user_tel}}' bindinput='telInput'></input>
+</view>
+<view class="phonenum_btn"><button type='primary' bindtap='save_tel'>保存</button></view>
+</view>

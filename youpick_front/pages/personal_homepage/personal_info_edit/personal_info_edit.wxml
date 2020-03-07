@@ -1,0 +1,23 @@
+<!--pages/personal_homepage/personal_info_edit/personal_info_edit.wxml-->
+<view class='container'>
+  <view class="user_option">
+    <view class="option_item">
+      <text>昵称</text>
+      <view class='disable'><text >{{usernickname}}</text></view>
+    </view>
+    <view class="option_item hr" bindtap='toEditUserMotto'>
+      <text>个性签名</text>
+      <image src='../../images/into.png'></image>
+    </view>
+    <view class="option_item" bindtap='toEditUserTel'>
+      <text>手机号码</text>
+      <image src='../../images/into.png'></image>
+    </view>
+    <!--
+    <view class="option_item">
+      <text>我的地址</text>
+      <image src='../../images/into.png'></image>
+    </view>
+    -->
+  </view>
+</view>

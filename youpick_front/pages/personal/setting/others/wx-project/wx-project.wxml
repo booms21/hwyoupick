@@ -1,0 +1,25 @@
+
+<view class="page">
+  <view class="about">
+    <view class="about-item">
+    
+      <text class="about-item-content">本小程序通过发布即可在发现中看到自己发布的商品信息，可对其他人发布的商品贴进行相关操作。</text>
+    </view>
+    <view class="about-item">
+      <text class="about-item-title">服务端API逻辑实现</text>
+      <text class="about-item-content link">Node.js+https免费证书+Expres router+MySQL</text>
+    </view>
+      <view class="about-item">
+      <text class="about-item-title">后端服务器</text>
+      <text class="about-item-content link">alc</text>
+    </view>
+    <view class="about-item">
+      <text class="about-item-title">后端API来源</text>
+      <text class="about-item-content link">https://youpick.site:3000</text>
+    </view>
+    <view class="about-item">
+      <text class="about-item-title">作者</text>
+      <text class="about-item-content link">宋子龙 QQ949487862</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,80 @@
+<!--pages/goods_publish/goods_publish.wxml-->
+<loading hidden="{{loadingHidden}}">正在发布...</loading>
+<view class="container">
+<view class="input_box">
+<input placeholder='请输入标题*' maxlength='40' class="title_input" placeholder-style="font-size:0.8rem" bindinput ="title_Input"></input>
+<textarea placeholder="请输入您的商品点评的详细描述内容*" name="textarea" maxlength='500' class="goods_detail " bindinput ="detail_Input"/>
+</view>
+
+<view class='goodsprice'>
+<view class='pricetitle'>价格(可选项):</view>
+<view class='priceinput'>
+<input placeholder='实际价格' maxlength='10' bindinput ="dispriceInput"></input>
+<input placeholder='原价' maxlength='10' bindinput ="priceInput"></input>
+</view>
+</view>
+
+
+
+
+<view class="sort">
+<view class="input_box">
+<view class="section__title">选择商品所属分类*</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+</view>
+
+
+
+<view class="image">
+<view class="input_box">
+
+<view >
+<view>请上传一张有关于商品的图片(可选项)</view>
+<image class="addimages"  mode="aspectFill" src='../images/addimages.png' bindtap="chooseImage"></image>
+</view>
+
+<view class="question-images">
+  <block wx:for="{{images}}" wx:key="*this">
+    <view class="q-image-wrap">
+      <!-- 图片缩略图  -->
+      <image class="addimages" src="{{item}}" mode="aspectFill"  data-idx="{{index}}" bindtap="handleImagePreview"></image>
+      <!-- 移除图片的按钮  -->
+      <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+    </view>
+  </block>
+</view>
+</view>
+
+</view>
+
+
+<view class='goods_platform'>
+<view>平台(可选项):</view>
+<view><input placeholder="请输入您的商品所在的购买平台，如：天猫、京东、毒" maxlength='20' bindinput ="platformInput"></input></view>
+</view>
+
+<view class='goods_link'>
+<view>购买链接*:</view>
+<view><input placeholder="请粘贴您商品的购买链接" maxlength='255' bindinput ="linkInput"></input></view>
+</view>
+
+<view class='goods_buycode'>
+<view>淘口令(可选项):</view>
+<view><input placeholder="请粘贴您商品的淘宝口令" maxlength='255' bindinput ="buycodeInput"></input></view>
+</view>
+
+
+<view class="submit">
+<view class="input_box">
+
+<button type="primary" bindtap='submit'>发布</button>
+</view>
+</view>
+
+
+</view>

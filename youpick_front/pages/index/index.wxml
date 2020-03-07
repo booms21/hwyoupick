@@ -1,0 +1,118 @@
+<!--index.wxml-->
+<loading hidden="{{loadingHidden}}">正在加载...</loading>
+<view class="container">
+  <!--头部开始-->
+  <view class="top">
+
+  
+    <!--头部搜索栏开始-->
+         <!--<view class="top_tool">
+ 
+      <view class="logo">
+        <text>优评</text>
+      </view>
+
+
+  <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+
+  
+    </view>  -->
+
+
+    <!--头部搜索栏结束-->
+    <!--焦点图开始-->
+    <view class="top_focus">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image style="width:100%;" src="{{item}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!--焦点图结束-->
+
+    <view class="nav">
+    
+      <view><navigator open-type='navigate' url="../goods_sort/goods_sort?sortid=1">
+        <image src="../images/cp.png" mode='aspectFit'/>
+        <text>潮牌</text>
+         </navigator></view>
+   
+      <view>
+      <navigator open-type='navigate' url="../goods_sort/goods_sort?sortid=2">
+        <image src="../images/pj.png" mode='aspectFit'/>
+        <text>配件</text>
+        </navigator></view>
+      <view>
+      <navigator open-type='navigate' url="../goods_sort/goods_sort?sortid=3">
+        <image src="../images/yp.png" mode='aspectFit'/>
+        <text>优品</text>
+        </navigator></view>
+      <view>
+      <navigator open-type='navigate' url="../goods_sort/goods_sort?sortid=4">
+        <image src="../images/zb.jpg" mode='aspectFit'/>
+        <text>周边</text>
+       </navigator> </view>
+    </view>
+
+  </view>
+
+  <!--头部结束-->
+  <!--底部开始-->
+  <view class="bottom">
+    <view class="title">
+      <text>最热</text>
+      <text class="hot_str">HOT！</text>
+    </view>
+    <view class="hot_list" wx:for="{{hotList}}" wx:key="{{item.id}}">
+
+      <view class="list_item" data-id="{{item.id}}" bindtap='goDetail'>
+        <view class="item_pic">
+          <image src='{{item.goods_imgPath}}' />
+        </view>
+        <view class="item_info">
+          <view class="item_title">
+            <text>{{item.review_title}}</text>
+          </view>
+          <view class="item_score">
+            <text>{{item.goods_platform}}</text>
+          </view>
+          <view class="item_price">¥ {{item.goods_discountPrice}}</view>
+          <view class="item_sort">
+            <image src='../images/fenlei.png'></image>
+            <text>{{item.goodsSort_name}}</text>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+    <!--热门专题 begin-->
+	<view class="some-room mt30 clearfix">
+		<view class="sroom-l box-sizing fl"><navigator url="../goods_detail/goods_detail?goodsid=1"><image src="../images/newuser.jpg" alt=""></image></navigator></view>
+		<view class="sroom-r fr">
+			<view><navigator url="../goods_detail/goods_detail?goodsid=2"><image src="../images/ppweek.jpg" alt=""></image></navigator></view>
+			<view><navigator url="../goods_detail/goods_detail?goodsid=3"><image src="../images/hootroom8.jpg" alt=""></image></navigator></view>
+		</view>
+	</view>
+<!--热门专题 end-->
+  </view>
+  <!--底部结束-->
+
+</view>

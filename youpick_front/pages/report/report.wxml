@@ -1,0 +1,34 @@
+<!--pages/report/report.wxml-->
+
+<view class="container">
+
+<view class="input_box">
+
+<input placeholder='请输入举报标题' maxlength='40' class="title_input" placeholder-style="font-size:0.8rem" bindinput='titleInput'></input>
+<textarea placeholder="请详细描述您的举报原因" name="textarea" maxlength='500' class="report_detail " bindinput='contentInput'/>
+</view>
+
+<view class="sort">
+<view class="input_box">
+<view class="section__title">选择违规分类</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+</view>
+
+
+
+
+
+<view class="submit">
+<view class="input_box">
+
+<button type="primary" bindtap='submit'>提交举报</button>
+</view>
+</view>
+
+
+</view>

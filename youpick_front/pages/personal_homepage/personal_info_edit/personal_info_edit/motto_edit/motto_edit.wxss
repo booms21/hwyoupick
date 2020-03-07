@@ -1,0 +1,18 @@
+/* pages/personal_homepage/personal_info_edit/personal_info_edit/motto_edit/motto_edit.wxss */
+
+.motto_input>input {
+  height: 100rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 20rpx;
+}
+
+.motto_btn {
+  padding: 20rpx;
+  margin-top: 50rpx;
+}

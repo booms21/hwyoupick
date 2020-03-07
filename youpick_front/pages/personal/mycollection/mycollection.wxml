@@ -1,0 +1,28 @@
+<!--pages/personal/mycollection/mycollection.wxml-->
+<view class='container'>
+    <view class='collection_list'  >
+<block wx:for="{{list}}" wx:key="{{item.id}}">
+      <view class='item-box ' bindtap='goDetail' data-goodsid='{{item.GoodsInfo_ID}}'>
+        <view class='item-img'>
+          <image src='{{item.goods_imgPath}}'></image>
+        </view>
+        <view class='item-info'>
+          <view class='info-title len-limit'>
+            <text>{{item.review_title}}</text>
+          </view>
+          <view class='info-pick'>
+            <text>{{item.goods_likes}}</text>
+            <image src='../../images/zan.png'></image>
+          </view>
+          <view class='info-price len-limit'>
+            <text>¥ {{item.goods_discountPrice}}</text>
+          </view>
+        </view>
+      </view>
+</block>
+    
+
+  
+
+    </view>
+   </view>

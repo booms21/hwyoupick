@@ -1,0 +1,22 @@
+/* pages/personal_homepage/personal_info_edit/personal_info_edit.wxss */
+.option_item{
+  font-size:0.9rem;
+border-bottom: 1rpx solid #f0f0f0;
+height: 100rpx;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+margin: 0 30rpx;
+}
+.option_item>image{
+  height: 25rpx;
+  width: 25rpx;
+
+}
+.hr{
+ border-bottom: 20rpx solid #f0f0f0;
+padding: 0 30rpx;
+margin: 0;
+}
+.disable{color:#666;}

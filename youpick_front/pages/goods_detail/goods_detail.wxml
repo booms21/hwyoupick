@@ -1,0 +1,160 @@
+<!--pages/goods_detail/goods_detail.wxml-->
+<!--answer.wxml-->
+<loading hidden="{{loadingHidden}}">正在加载...</loading>
+<view class="container">
+  <view class="question " >
+    <text class="question-title ">{{info.review_title}}</text>
+  </view>
+  <view class="answerer-wrp">
+    <view class="bg-half"></view>
+    <view class="answerer flex-wrp" bindtap='tohomePage'>
+      <view class="avatar flex-item">
+        <image src="{{info.wx_imgPath}}"></image>
+      </view>
+      <view class="answerer-info flex-item ">
+        <text class="answerer-name">{{info.wx_nickname}}</text>
+        <text class="answerer-des ">{{info.wx_motto}}</text>
+      </view>
+      <view class="follow flex-item" hover-class="followhover" catchtap='changetext' hidden='{{followimghidden}}'>
+        <text style="background:{{bgc}}; color:{{fs}};">{{followtext}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="answer-content">
+    <text>{{info.review_detail}}</text>
+    <image src="{{info.goods_imgPath}}" mode='aspectFit'></image>
+    
+  </view>
+
+  <view class="timeandview">
+  <!--
+  <view class='viewsnum'>浏览 {{info.release_time1}}</view>-->
+  <view class='datetime'>{{info.release_time1}}</view>
+  </view>
+
+<view class="goods_info">
+<view class="goods_price">
+<view class="goods_nowprice"><text>¥ {{info.goods_discountPrice}}</text></view><view class="goods_delline"><text> {{info.goods_price}}</text></view>
+</view><view>
+
+
+<view class="num_info" bindtap='dianzan'>
+<image src='{{dzimg}}'></image> 
+      <text> {{info.goods_likes}}</text>
+</view>
+
+<view class="num_info" bindtap='collection' >
+<image src='{{coltionimg}}'></image> 
+      <text>{{coltiontext}}</text>
+</view>
+
+<view class="num_info" hidden='{{followimghidden}}' bindtap='goReportPage'>
+<image src='../images/reporticon.png'></image> 
+      <text>举报</text>
+</view>
+
+</view>
+</view>
+
+
+
+
+<view class='goods_source'>
+
+<view class='link'>
+<view class='source_title'><image src='../images/linkicon.png'></image>
+<text>链接</text>
+</view>
+<view class="source_body"><text>{{info.goods_link}}</text></view>
+</view>
+
+
+<view class='code'>
+<view class='source_title'><image src='../images/codeicon.png'></image>
+<text>口令</text>
+</view>
+<view class="source_body"><text>{{info.goods_buycode}}</text></view>
+</view>
+
+
+<view class='platform' style='border-bottom:none;'>
+<view class='source_title'><image src='../images/platformicon.png'></image>
+<text>平台</text>
+</view>
+<view class="source_body"><text>{{info.goods_platform}}</text></view>
+</view>
+</view>
+
+
+
+
+<view class="topic__comment">
+  <view class="topic__commen__header">全部评论({{commentlist.length}})</view>
+  <view class="view topic__commen__body">
+
+
+    <block wx:for="{{commentlist}}" wx:key="{{index}}">
+      <view class="comment">
+        <view class="comment__avatar">
+          <image class="img-avatar" src="{{ commentlist[index].wx_imgPath }}" />
+        </view>
+
+        <view class="comment__info">
+          <view class="comment__media">
+            <view class="comment__media__left">
+              <view class="comment__username">{{commentlist[index].wx_nickname}}</view>
+              <view class="comment__date">{{commentlist[index].Comment_time1}}</view>
+            </view>
+          
+          </view>
+          <view class="comment__content">
+            <view class="markdown-text">
+              {{commentlist[index].Comment_content}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+</view>
+
+<view class="answer-footer flex-wrp">
+  <view class="comment_input">
+    <input placeholder='我来说几句' maxlength='50' bindinput='comment_Input'></input>
+  </view>
+  <view class="submit">
+    <button type='primary' size="mini" bindtap='submitcomment'> 发表</button>
+  </view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

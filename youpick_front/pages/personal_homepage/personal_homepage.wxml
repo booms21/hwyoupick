@@ -1,0 +1,108 @@
+<!--pages/personal_homepage/personal_homepage.wxml-->
+<loading hidden="{{loadingHidden}}">正在加载...</loading>
+<view class='container'>
+  <!--用户信息顶部面板开始-->
+  <view class='userinfo_bg'>
+    <image src='../images/userinfo_bgimg.png' mode='scaleToFill'></image>
+  </view>
+
+  <view class='user_info'>
+    <view class='user_info_edit' hidden='{{IsediticonHidden}}'  bindtap='toEditUserInfo'>
+      <image src='../images/userinfo_edit_ico.png'></image>
+    </view>
+    <view class='user_pic'>
+      <image src='{{userinfo.wx_imgPath}}'></image>
+    </view>
+    <view class='user_name'>
+      <b>
+        <text>{{userinfo.wx_nickname}}</text>
+      </b>
+    </view>
+    <view class='user_motto len-limit'>
+      <text>{{userinfo.wx_motto}}</text>
+    </view>
+    <view class='user_data'>粉丝
+      <b>{{fansnum}}</b> | 关注
+      <b>{{floedsnum}}</b> | 总获赞
+      <b>{{likesnum}}</b>
+    </view>
+  </view>
+  <!--用户信息顶部面板结束-->
+
+  <!--用户最新动态开始-->
+  <view class="recent_activity">
+
+    <!--顶部选项卡-->
+    <view class="navbar">
+
+      <text class="item {{currentTab==1 ? 'active' : ''}}" data-idx="1" bindtap="navbarTap">发布的宝贝</text>
+      <text class="item {{currentTab==2 ? 'active' : ''}}" data-idx="2" bindtap="navbarTap">动态</text>
+    </view>
+
+    <!--发布的宝贝-->
+    <view class='publish_list' hidden="{{currentTab==2}}">
+ <block wx:for="{{goodslist}}" wx:key="{{item.id}}" >
+      <view class='item-box' data-id="{{item.id}}" bindtap='goDetail'>
+        <view class='item-img'>
+          <image src='{{item.goods_imgPath}}'></image>
+        </view>
+        <view class='item-info'>
+          <view class='info-title len-limit'>
+            <text>{{item.review_title}}</text>
+          </view>
+          <view class='info-pick'>
+            <text>{{item.goods_likes}}</text>
+            <image src='../images/zan.png'></image>
+          </view>
+          <view class='info-price len-limit'>
+            <text>¥ {{item.goods_discountPrice}}</text>
+          </view>
+        </view>
+      </view>  
+  </block>
+    </view>
+
+    <!--动态-->
+    <view class="activity_list" hidden="{{currentTab==1}}" >
+
+  <block wx:for="{{CommentList}}" wx:key="{{item.id}}" >
+        <view class="activity_item">
+          <view class='activity_info'>
+            <view class='activity_data'>
+              <view class='activity_way'>
+             <text class='user_name'>{{userinfo.wx_nickname}}</text> <text>评论了这个宝贝
+             </text> </view>
+              <view class='activity_time'>
+                <text>{{item.Comment_time1}}</text>
+              </view>
+            </view>
+            <view class='comment_data'>
+              <text>{{item.Comment_content}}</text>
+            </view>
+          </view>
+          <view class='goods_box'>
+            <view class="goods_pic">
+              <image src='{{item.goods_imgPath}}' />
+            </view>
+            <view class="goods_info">
+              <view class="goods_username">
+                <text>{{item.review_title}}</text>
+              </view>
+              <view class="goods_describe">
+                <text>{{item.review_detail}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+ </block>
+
+
+  
+
+    </view>
+
+
+
+  </view>
+  <!--用户最新动态结束-->
+</view>

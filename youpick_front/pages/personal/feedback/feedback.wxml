@@ -1,0 +1,25 @@
+<!--pages/personal/feedback/feedback.wxml-->
+
+<view class="container">
+
+<view class="input_box">
+<view class='feedback_title'><text>非常感谢您的宝贵意见！</text></view>
+
+<textarea placeholder="请详细描述您需要反馈的内容" name="textarea" maxlength='500' class="feedback_detail" bindinput='contentInput'/>
+<input placeholder='请输入您的电子邮箱，便于我们联系您' maxlength='40' class="title_input" placeholder-style="font-size:0.8rem" bindinput='emailInput'></input>
+</view>
+
+
+
+
+
+<view class="submit">
+<view class="input_box">
+
+<button type="primary" bindtap='submit'>提交</button>
+</view>
+</view>
+
+
+</view>
+
