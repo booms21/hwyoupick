@@ -13,7 +13,8 @@ Node.js+https免费证书+Expres router+MySQL
 # 后端API来源:
 https://youpick.site:3000
 
-# 后端服务运行：需在根目录node app.js
+# 后端服务运行：
+需在根目录node app.js
 
 # 墨刀设计稿链接：
 https://free.modao.cc/app/5957c02bacf8062700b7facc0c20a88ade3bf24f?simulator_type=device&sticky
